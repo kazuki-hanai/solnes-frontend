@@ -21,15 +21,16 @@ export default {
   ],
   optimize: {
     /* Example: Bundle your final build: */
-    // "bundle": true,
+    "bundle": true,
   },
   packageOptions: {
-    /* ... */
+    polyfillNode: true,
   },
   devOptions: {
-    open: "none"
+    open: "none",
+    sourcemap: true,
   },
   buildOptions: {
-    /* ... */
+    sourcemap: true,
   },
 };

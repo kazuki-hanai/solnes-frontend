@@ -1,21 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { ReactElement } from 'react';
 import { css } from '@emotion/css';
-import { SimulatorBoard } from './components/SimulatorBoard';
+import { Menu } from './components/Menu';
+import { MainContent } from './components/MainContent';
+import { Search } from './components/Search';
 
 const wrapperStyle = css`
-    width: 800px;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    width: 1200px;
 `;
 
-type AppProps = {}
 
-const App = ({ }: AppProps) => {
+const App = (): ReactElement => {
     return (
         <div className={wrapperStyle}>
-            <header>
-                <h1>Carla simulator dashboard</h1>
-            </header>
-            <SimulatorBoard />
+            <Menu />
+            <MainContent />
+            <Search />
         </div>
     );
 }
